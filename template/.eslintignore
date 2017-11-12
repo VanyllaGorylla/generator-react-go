@@ -1,0 +1,6 @@
+test*/*
+coverage/*
+json-server-db/*
+node_modules/*
+hapi-server/*
+webpack.config.js
