@@ -5,16 +5,17 @@ The package contains **React**, **Redux**, **React-Router** and **Materialize Cs
 
 Moreover, I used **Json-Server** as a backend, so you will be able to see how to implement interaction with **live data server** and how to handle its states with **Redux**.
 
+## Installation
+```sh
+npm i -g yo generator-react-go
+```
+
 ## How to use
 In console
 ```sh
 yo react-go <appname>
 cd <appname>
 npm install
-```
-
-after that in first console
-```sh
 npm start
 ```
 

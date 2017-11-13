@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/VanyllaGorylla/generator-react-go#readme",
   "files": [
-    "app"
+    "generators",
+    "template"
   ],
   "dependencies": {
     "yeoman-generator": "^2.0.1"
