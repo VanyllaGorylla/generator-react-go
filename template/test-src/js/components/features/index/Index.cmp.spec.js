@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount, render, configure } from 'enzyme';
-import Index from '../../../../../src/js/components/features/index/index.cmp.jsx';
+import Index from '../../../../../src/js/components/features/index/Index.cmp.jsx';
 
 import Adapter from 'enzyme-adapter-react-16';
 
