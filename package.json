@@ -1,7 +1,7 @@
 {
   "name": "generator-react-go",
-  "version": "0.0.2",
-  "description": "Simple react generator with materialize css and webpack",
+  "version": "0.1.0",
+  "description": "Simple React generator with materialize css and webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,14 @@
     "react-redux",
     "webpack",
     "materialize css",
+    "redux-form",
+    "Redux Form",
+    "React",
+    "redux-promise-middleware",
+    "redux-thunk",
+    "materialize",
+    "generator",
+    "boilerplate",
     "vanyllas",
     "goryllas"
   ],

@@ -3,7 +3,7 @@ import { mount, shallow, render, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import '../../../../../src/js/config/dev.config.js';
-import Navigation from '../../../../../src/js/components/common/navigation/navigation.cmp.jsx';
+import Navigation from '../../../../../src/js/components/common/navigation/Navigation.cmp.jsx';
 
 configure({ adapter: new Adapter() });
 

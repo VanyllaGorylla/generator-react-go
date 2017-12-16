@@ -22,15 +22,15 @@ console.log(`CURRENT CONFIG: ${config}`);
 
 module.exports = {
 	entry: {
-		config: path.join(__dirname, `/src/js/config/${config}.config.js`),
-		main: [path.join(__dirname, '/src/main.jsx')]
+		main: path.join(__dirname, '/src/index.jsx')
 	},
 	output: {
 		path: path.join(__dirname, `${distFolder}`),
-		filename: '[name].bundle.js'
+		filename: '[name].bundle.js',
+		publicPath: '/'
 	},
 	devServer: {
-		contentBase: path.join(__dirname, distFolder),
+		contentBase: path.join(__dirname, `${distFolder}`),
 		port: 3000,
 		historyApiFallback: true
 	},
@@ -51,14 +51,16 @@ module.exports = {
 				exclude: /node_modules/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: 'css-loader'
+					use: 'css-loader',
+					publicPath: '/'
 				})
 			},
 			{
 				test: /\.scss$/,
 				exclude: /node_modules/,
 				use: ExtractTextPlugin.extract({
-					use: ['css-loader', 'sass-loader']
+					use: ['css-loader', 'sass-loader'],
+					publicPath: '/'
 				})
 			},
 			{
@@ -75,10 +77,12 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: `index.html`,
-			template: path.join(__dirname, '/src/tpl/index.template.html'),
-			inject: false
+			template: path.join(__dirname, './src/tpl/index.template.html')
 		}),
-		new DefinePlugin({ 'NODE_ENV': config }),
+		new DefinePlugin({
+			'NODE_ENV': config,
+			'__CONFIG__': JSON.stringify(require(`./src/js/config/${config}.config.js`))
+		}),
 		new ExtractTextPlugin(`[name].css`),
 		new ProvidePlugin({
 			'&': 'jquery',
