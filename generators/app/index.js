@@ -8,6 +8,7 @@ module.exports = class extends Generator {
 		this.log(`The name of your project is : ${this.options.appName}`);
 	}
 
+	// copy template
 	copyTemplate() {
 		let appName = this.options.appName;
 		this.fs.copyTpl(
