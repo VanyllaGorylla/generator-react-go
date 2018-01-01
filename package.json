@@ -1,6 +1,6 @@
 {
   "name": "generator-react-go",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple React generator with materialize css and webpack",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,6 @@
 # Changelog
+## 0.1.1
++ Solves windows components issue
 ## 0.1.0
 + Adds redux forms
 + Fixes some bugs
