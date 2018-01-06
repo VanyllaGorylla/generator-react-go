@@ -29,7 +29,7 @@ Above commands will create, install deps and start an application. Second consol
 ## Test
 Test were written with **Jest** and **Enzyme**.
 
-To run tests you can ismply put below command.
+To run tests you can simply put below command.
 ```sh
 npm test
 ```
