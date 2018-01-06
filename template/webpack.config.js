@@ -26,7 +26,7 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname, `${distFolder}`),
-		filename: '[name].bundle.js',
+		filename: '[name].[chunkhash].bundle.js',
 		publicPath: '/'
 	},
 	devServer: {
@@ -83,7 +83,7 @@ module.exports = {
 			'NODE_ENV': config,
 			'__CONFIG__': JSON.stringify(require(`./src/js/config/${config}.config.js`))
 		}),
-		new ExtractTextPlugin(`[name].css`),
+		new ExtractTextPlugin(`[name].[chunkhash].css`),
 		new ProvidePlugin({
 			'&': 'jquery',
 			'jQuery': 'jquery',

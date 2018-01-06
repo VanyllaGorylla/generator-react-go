@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "webpack-dev-server",
 		"test": "jest test-src",
-		"build-prod": "cross-env NODE_ENV=production node webpack -p",
+		"build-prod": "cross-env NODE_ENV=production node ./node_modules/webpack/bin/webpack.js -p",
 		"eslint": "eslint src/",
 		"json-api": "json-server ./json-server-db/db.json"
 	},
