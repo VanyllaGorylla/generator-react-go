@@ -3,7 +3,7 @@ import { render, configure } from 'enzyme';
 
 import Adapter from 'enzyme-adapter-react-16';
 
-import { PostsCmp } from '../../../../../src/js/components/features/posts/Posts.cmp.jsx';
+import { PostsCmp } from 'PostsModule/Posts.cmp.jsx';
 
 configure({ adapter: new Adapter() });
 

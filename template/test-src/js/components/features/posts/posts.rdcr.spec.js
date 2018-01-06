@@ -1,6 +1,6 @@
-import { ACTIONS } from '../../../../../src/js/components/features/posts/posts.actions';
+import { ACTIONS } from 'PostsModule/posts.actions';
 
-import posts from '../../../../../src/js/components/features/posts/posts.rdcr';
+import posts from 'PostsModule/posts.rdcr';
 
 describe('post reducer', function () {
 

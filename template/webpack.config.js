@@ -89,5 +89,13 @@ module.exports = {
 			'jQuery': 'jquery',
 			'jquery': 'jquery'
 		})
-	]
+	],
+	resolve: {
+		alias: {
+			'TodoExampleModule': path.resolve(__dirname, './src/js/components/features/todo-example/'),
+			'PostsModule': path.resolve(__dirname, './src/js/components/features/posts'),
+			'IndexModule': path.resolve(__dirname, './src/js/components/features/index'),
+			'CommonModule': path.resolve(__dirname, './src/js/components/common')
+		}
+	}
 };

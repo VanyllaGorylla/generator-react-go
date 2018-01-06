@@ -1,6 +1,5 @@
-import ACTIONS from '../../../../../src/js/components/features/todo-example/todoExample.actions';
-
-import todos from '../../../../../src/js/components/features/todo-example/todos.rdcr';
+import ACTIONS from 'TodoExampleModule/todoExample.actions';
+import todos from 'TodoExampleModule/todos.rdcr';
 
 describe('todos reducer tests', function () {
 	it('should add new todo item', function () {

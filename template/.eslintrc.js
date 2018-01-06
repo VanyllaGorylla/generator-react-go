@@ -41,7 +41,7 @@ module.exports = {
 
     },
     "globals": {
-        "CONFIG": true,
+        "__CONFIG__": true,
         "document": true,
         "WebSocket": true,
         "window": true

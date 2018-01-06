@@ -1,4 +1,7 @@
 # Changelog
+## 0.1.2
++ Adds Modules, now there is now need to import files like *../../../../../*. You can **ExampleModule/file.js**. (Remember to put then into *wepack.config.js* -> *resolve.alias* and *package.json* -> *jest section*)
++ Adds *pre-commit* with triggered *eslint*. Now before *git commit* eslint will be triggered and you will be forced to improve your code.
 ## 0.1.1
 + Solves windows components issue
 ## 0.1.0

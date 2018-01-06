@@ -4,7 +4,7 @@ import configureStore from 'redux-mock-store'
 
 import Adapter from 'enzyme-adapter-react-16';
 
-import WrapperTodoExample, { TodoExample } from '../../../../../src/js/components/features/todo-example/TodoExample.cmp.jsx';
+import WrapperTodoExample, { TodoExample } from 'TodoExampleModule/TodoExample.cmp.jsx';
 
 configure({ adapter: new Adapter() });
 

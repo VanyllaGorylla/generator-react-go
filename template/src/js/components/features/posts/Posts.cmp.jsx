@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getPosts, deletePost, updatePost } from './posts.actions';
 
-import LoadingWrapper from '../../common/LoadingWrapper.cmp.jsx';
+import LoadingWrapper from 'CommonModule/LoadingWrapper.cmp.jsx';
 import PostsList from './PostsList.cmp.jsx';
 
 class PostsCmp extends Component {

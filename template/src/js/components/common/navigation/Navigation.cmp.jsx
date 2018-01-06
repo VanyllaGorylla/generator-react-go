@@ -7,10 +7,10 @@ import {
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
-import Index from '../../../components/features/index/Index.cmp.jsx';
-import TodoExample from '../../../components/features/todo-example/TodoExample.cmp.jsx';
-import Posts from '../../../components/features/posts/Posts.cmp.jsx';
-import PostsEdit from '../../../components/features/posts/PostsEdit.cmp.jsx';
+import Index from 'IndexModule/Index.cmp.jsx';
+import TodoExample from 'TodoExampleModule/TodoExample.cmp.jsx';
+import Posts from 'PostsModule/Posts.cmp.jsx';
+import PostsEdit from 'PostsModule/PostsEdit.cmp.jsx';
 import Error404Handler from '../404/Error404.cmp.jsx';
 
 const Navigation = () => <Router>

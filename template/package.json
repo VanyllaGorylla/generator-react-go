@@ -91,6 +91,15 @@
 					"URL": "/"
 				}
 			}
+		},
+		"moduleNameMapper": {
+			"^TodoExampleModule/(.*)": "<rootDir>/src/js/components/features/todo-example/$1",
+			"^PostsModule/(.*)": "<rootDir>/src/js/components/features/posts/$1",
+			"^IndexModule/(.*)": "<rootDir>/src/js/components/features/index/$1",
+			"^CommonModule/(.*)": "<rootDir>/src/js/components/common/$1"
 		}
-	}
+	},
+	"pre-commit": [
+		"eslint"
+	]
 }
