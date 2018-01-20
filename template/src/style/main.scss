@@ -1,6 +1,6 @@
 @import 'custom-materialize.scss';
 
-@import '../js/components/features/todo-example/todoExample.scss';
+@import '~TodoExampleModule/todoExample.scss';
 
 .break-word {
     word-wrap: break-word;

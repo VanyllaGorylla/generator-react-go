@@ -1,4 +1,11 @@
 # Changelog
+## 0.1.4
++ After putting *npm start* browser will open
++ Adds information about application port
++ Adds support for **Redux Devtools**
++ Switch from *babel-preset-2015* to *babel-preset-env*
++ Makes simplier to modify *MaterializeCss*
+
 ## 0.1.3
 + Fixes **build-prod** command
 + Removes unnecessary reference to *main.css* file in *index.html*
