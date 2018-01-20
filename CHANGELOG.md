@@ -1,4 +1,7 @@
 # Changelog
+## 0.1.5
++ Changes *todoItem.cmp.jsx* to *TodoItem.cmp.jsx* - linux fix
+
 ## 0.1.4
 + After putting *npm start* browser will open
 + Adds information about application port
