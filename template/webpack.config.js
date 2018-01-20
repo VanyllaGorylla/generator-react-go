@@ -5,8 +5,10 @@ let { DefinePlugin, ProvidePlugin } = require('webpack');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let webpack = require('webpack');
 
+
 let defaultConfigName = 'dev';
 let config = process.env.NODE_ENV || defaultConfigName;
+const port = process.env.PORT || 3000;
 let distFolder;
 
 // set destination folder
@@ -18,7 +20,8 @@ switch (config) {
 		distFolder = 'dist';
 };
 
-console.log(`CURRENT CONFIG: ${config}`);
+console.log(`CURRENT CONFIG: ${config}.`);
+console.log(`Application will be available at port: ${port}.`);
 
 module.exports = {
 	entry: {
@@ -31,7 +34,7 @@ module.exports = {
 	},
 	devServer: {
 		contentBase: path.join(__dirname, `${distFolder}`),
-		port: 3000,
+		port: port,
 		historyApiFallback: true
 	},
 	module: {
@@ -95,7 +98,8 @@ module.exports = {
 			'TodoExampleModule': path.resolve(__dirname, './src/js/components/features/todo-example/'),
 			'PostsModule': path.resolve(__dirname, './src/js/components/features/posts'),
 			'IndexModule': path.resolve(__dirname, './src/js/components/features/index'),
-			'CommonModule': path.resolve(__dirname, './src/js/components/common')
+			'CommonModule': path.resolve(__dirname, './src/js/components/common'),
+			'MaterializeCss': path.resolve(__dirname, './node_modules/materialize-css')
 		}
 	}
 };

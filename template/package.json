@@ -4,11 +4,12 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "webpack-dev-server",
+		"start": "npm run html-dev-server",
 		"test": "jest test-src",
 		"build-prod": "cross-env NODE_ENV=production node ./node_modules/webpack/bin/webpack.js -p",
 		"eslint": "eslint src/",
-		"json-api": "json-server ./json-server-db/db.json"
+		"json-api": "json-server ./json-server-db/db.json",
+		"html-dev-server": "webpack-dev-server --open"
 	},
 	"author": "Vanylla Gorylla",
 	"license": "MIT",
@@ -18,7 +19,7 @@
 		"babel-jest": "^21.2.0",
 		"babel-loader": "^7.1.1",
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
-		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-env": "^1.6.1",
 		"babel-preset-react": "^6.24.1",
 		"boom": "^7.1.1",
 		"copy-webpack-plugin": "^4.2.3",
