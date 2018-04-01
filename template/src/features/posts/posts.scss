@@ -1,0 +1,9 @@
+@import '~@/style/_variables.scss';
+
+.action-element {
+  margin: 0 2px;
+  &__delete {
+    color: $primary-color;
+    cursor: pointer;
+  }
+}

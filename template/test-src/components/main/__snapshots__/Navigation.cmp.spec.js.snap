@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation.cmp test should proper HTML 1`] = `
+<nav>
+  <div
+    className="nav-wrapper"
+  >
+    <a
+      className="brand-logo "
+      href="/"
+    >
+      apka
+    </a>
+    <ul
+      className="right hide-on-med-and-down"
+    >
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Index
+        </a>
+      </li>
+      <li>
+        <a
+          href="/todo-example"
+          onClick={[Function]}
+        >
+          Todo Example
+        </a>
+      </li>
+      <li>
+        <a
+          href="/posts"
+          onClick={[Function]}
+        >
+          Posts
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

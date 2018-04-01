@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index.cmp test should render propr HTML 1`] = `
+<div
+  className="container index"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-content"
+    >
+      <span
+        className="card-title"
+      >
+        Hello my friend!!
+      </span>
+    </div>
+  </div>
+</div>
+`;

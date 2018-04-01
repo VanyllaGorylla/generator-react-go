@@ -2,23 +2,22 @@
 	Update some variables and their dependencies
 */
 // Colors
-$primary-color: color("blue", "base") !default;
+$primary-color: color('blue', 'base') !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("blue", "lighten-2") !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$secondary-color: color('blue', 'lighten-2') !default;
+$success-color: color('green', 'base') !default;
+$error-color: color('red', 'base') !default;
+$link-color: color('light-blue', 'darken-1') !default;
 
 /**
 	Need to update path to the fonts -> must have
 */
 // Fonts
-$roboto-font-path: "~MaterializeCss/dist/fonts/roboto/" !default;
+$roboto-font-path: '~materialize-css/dist/fonts/roboto/' !default;
 
 /**
 	Import variables files to add not overridden ones
 */
-@import "~MaterializeCss/sass/components/_variables.scss";
-
+@import '~materialize-css/sass/components/_variables.scss';

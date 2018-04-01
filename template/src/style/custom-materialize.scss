@@ -1,46 +1,46 @@
 @charset "UTF-8";
 
 // Colors
-@import "~MaterializeCss/sass/components/_color";
+@import '~materialize-css/sass/components/_color';
 
 // Variables;
-@import "_variables";
+@import '_variables';
 
 // Reset
-@import "~MaterializeCss/sass/components/_normalize";
+@import '~materialize-css/sass/components/_normalize';
 
 /**
 	Decide which modules you want to import
 */
 
 // components
-@import "~MaterializeCss/sass/components/_global";
-@import "~MaterializeCss/sass/components/_badges";
-@import "~MaterializeCss/sass/components/_icons-material-design";
-@import "~MaterializeCss/sass/components/_grid";
-@import "~MaterializeCss/sass/components/_navbar";
-@import "~MaterializeCss/sass/components/_roboto";
-@import "~MaterializeCss/sass/components/_typography";
-@import "~MaterializeCss/sass/components/_transitions";
-@import "~MaterializeCss/sass/components/_cards";
-@import "~MaterializeCss/sass/components/_toast";
-@import "~MaterializeCss/sass/components/_tabs";
-@import "~MaterializeCss/sass/components/_tooltip";
-@import "~MaterializeCss/sass/components/_buttons";
-@import "~MaterializeCss/sass/components/_dropdown";
-@import "~MaterializeCss/sass/components/_waves";
-@import "~MaterializeCss/sass/components/_modal";
-@import "~MaterializeCss/sass/components/_collapsible";
-@import "~MaterializeCss/sass/components/_chips";
-@import "~MaterializeCss/sass/components/_materialbox";
-@import "~MaterializeCss/sass/components/forms/forms";
-@import "~MaterializeCss/sass/components/_table_of_contents";
-@import "~MaterializeCss/sass/components/_sideNav";
-@import "~MaterializeCss/sass/components/_preloader";
-@import "~MaterializeCss/sass/components/_slider";
-@import "~MaterializeCss/sass/components/_carousel";
-@import "~MaterializeCss/sass/components/_tapTarget";
-@import "~MaterializeCss/sass/components/_pulse";
-@import "~MaterializeCss/sass/components/date_picker/default";
-@import "~MaterializeCss/sass/components/date_picker/default.date";
-@import "~MaterializeCss/sass/components/date_picker/default.time";
+@import '~materialize-css/sass/components/_global';
+@import '~materialize-css/sass/components/_badges';
+@import '~materialize-css/sass/components/_icons-material-design';
+@import '~materialize-css/sass/components/_grid';
+@import '~materialize-css/sass/components/_navbar';
+@import '~materialize-css/sass/components/_roboto';
+@import '~materialize-css/sass/components/_typography';
+@import '~materialize-css/sass/components/_transitions';
+@import '~materialize-css/sass/components/_cards';
+@import '~materialize-css/sass/components/_toast';
+@import '~materialize-css/sass/components/_tabs';
+@import '~materialize-css/sass/components/_tooltip';
+@import '~materialize-css/sass/components/_buttons';
+@import '~materialize-css/sass/components/_dropdown';
+@import '~materialize-css/sass/components/_waves';
+@import '~materialize-css/sass/components/_modal';
+@import '~materialize-css/sass/components/_collapsible';
+@import '~materialize-css/sass/components/_chips';
+@import '~materialize-css/sass/components/_materialbox';
+@import '~materialize-css/sass/components/forms/forms';
+@import '~materialize-css/sass/components/_table_of_contents';
+@import '~materialize-css/sass/components/_sideNav';
+@import '~materialize-css/sass/components/_preloader';
+@import '~materialize-css/sass/components/_slider';
+@import '~materialize-css/sass/components/_carousel';
+@import '~materialize-css/sass/components/_tapTarget';
+@import '~materialize-css/sass/components/_pulse';
+@import '~materialize-css/sass/components/date_picker/default';
+@import '~materialize-css/sass/components/date_picker/default.date';
+@import '~materialize-css/sass/components/date_picker/default.time';

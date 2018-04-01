@@ -3,3 +3,4 @@
 /production_dist
 /coverage
 /.sonar
+/build

@@ -1,7 +1,11 @@
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss';
+
 @import 'custom-materialize.scss';
 
-@import '~TodoExampleModule/todoExample.scss';
+@import '~@/features/todo-example/todoExample.scss';
+@import '~@/features/posts/posts.scss';
 
 .break-word {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
