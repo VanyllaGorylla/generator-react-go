@@ -1,60 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Container, Card, Row, Col } from 'react-materialize';
+import PropTypes from 'prop-types';
 
 import LoadingWrapper from '@/components/LoadingWrapper/LoadingWrapper.cmp';
-import { getPosts, deletePost, updatePost } from './posts.actions';
+import { getPosts } from './posts.actions';
 import PostsList from './PostsList.cmp';
 
-class PostsCmp extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+import wrapWithData from './hocs/wrapWithData.hoc';
 
-    this.onDeletePostClick = this.onDeletePostClick.bind(this);
-  }
+const PostsCmp = ({ dataLoading, data, loadingError }) => {
+  const actions = [
+    <Link key="new" to="/posts/new">
+      Create new
+    </Link>
+  ];
 
-  componentDidMount() {
-    this.props.getPosts();
-  }
-
-  onDeletePostClick(e) {
-    e.preventDefault();
-    this.props.deletePost(parseInt(e.target.getAttribute('data-id'), 0));
-  }
-
-  render() {
-    let { data, dataLoading } = this.props.posts;
-
-    return (
-      <div className="container">
-        <div className="card">
-          <div className="card-content">
-            <span className="card-title">Posts</span>
-            <LoadingWrapper isLoading={dataLoading}>
-              <PostsList
-                items={data}
-                onDeletePostClick={this.onDeletePostClick}
-              />
+  return (
+    <Container>
+      <Card title="Posts" actions={actions}>
+        <Row>
+          <Col l={12} s={12} m={12}>
+            <LoadingWrapper isLoading={dataLoading} error={loadingError}>
+              <PostsList items={data} />
             </LoadingWrapper>
-            <div className="card-action">
-              <a href="/posts/new">Create new</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+          </Col>
+        </Row>
+      </Card>
+    </Container>
+  );
+};
+
+PostsCmp.propTypes = {
+  dataLoading: PropTypes.bool.isRequired,
+  data: PropTypes.array.isRequired
+};
 
 const mapStateToProps = state => ({
-  posts: state.posts
+  data: state.posts.data,
+  dataLoading: state.posts.dataLoading,
+  loadingError: state.posts.error
 });
 
 const mapDispatchToProps = dispatch => ({
-  getPosts: () => dispatch(getPosts()),
-  deletePost: id => dispatch(deletePost(id)),
-  updatePost: post => dispatch(updatePost(post))
+  getData: () => dispatch(getPosts())
 });
 
 export { PostsCmp };
-export default connect(mapStateToProps, mapDispatchToProps)(PostsCmp);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  wrapWithData(PostsCmp)
+);

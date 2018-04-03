@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoExample test should render proper html 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-content"
+    >
+      <span
+        className="card-title grey-text text-darken-4"
+      >
+        Todo Example
+      </span>
+      <div>
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <input
+                onChange={[Function]}
+                placeholder="Put todo name here"
+                type="text"
+                value=""
+              />
+              <button
+                className="btn"
+                type="submit"
+              >
+                Add todo
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            <ul>
+              <li
+                onClick={[Function]}
+              >
+                <input
+                  defaultChecked={false}
+                  id="li-checkbox-1"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                <label
+                  className="label-color"
+                  htmlFor="li-checkbox-1"
+                  style={
+                    Object {
+                      "textDecoration": "",
+                    }
+                  }
+                >
+                  Do Laundry
+                </label>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <input
+                  defaultChecked={true}
+                  id="li-checkbox-2"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                <label
+                  className=""
+                  htmlFor="li-checkbox-2"
+                  style={
+                    Object {
+                      "textDecoration": "line-through",
+                    }
+                  }
+                >
+                  Wash your dishes
+                </label>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <input
+                  defaultChecked={false}
+                  id="li-checkbox-3"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                <label
+                  className="label-color"
+                  htmlFor="li-checkbox-3"
+                  style={
+                    Object {
+                      "textDecoration": "",
+                    }
+                  }
+                >
+                  Wash the floor
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card-reveal"
+    >
+      <span
+        className="card-title grey-text text-darken-4"
+      >
+        Todo Example
+        <i
+          className="material-icons right"
+        >
+          close
+        </i>
+      </span>
+    </div>
+  </div>
+</div>
+`;

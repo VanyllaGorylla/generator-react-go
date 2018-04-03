@@ -5,6 +5,7 @@ import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { Container } from 'react-materialize';
 
 import Navigation from './Navigation.cmp';
 import DeclaredRoutes from './DeclaredRoutes.cmp';
@@ -29,9 +30,9 @@ const MainCmp = () => (
       <Router>
         <div>
           <Navigation />
-          <div className="container">
+          <Container>
             <DeclaredRoutes />
-          </div>
+          </Container>
         </div>
       </Router>
     </div>

@@ -8,8 +8,9 @@ exports[`Navigation.cmp test should proper HTML 1`] = `
     <a
       className="brand-logo "
       href="/"
+      onClick={[Function]}
     >
-      apka
+      <%= appName %>
     </a>
     <ul
       className="right hide-on-med-and-down"

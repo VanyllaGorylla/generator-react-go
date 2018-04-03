@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts.cmp should render proper HTML when data is provided and there is no loading atm 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-content"
+    >
+      <span
+        className="card-title grey-text text-darken-4"
+      >
+        Posts
+      </span>
+      <div>
+        <div
+          className="row"
+        >
+          <div
+            className="col s12 m12 l12"
+          >
+            <ul
+              className="collection"
+            >
+              <li
+                className="collection-item"
+              >
+                First Post
+                <div
+                  className="right"
+                >
+                  <span
+                    className="action-element action-element__delete"
+                    onClick={[Function]}
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="fa fa-trash"
+                      data-id={1}
+                    />
+                  </span>
+                  <span
+                    className="action-element "
+                  >
+                    <a
+                      href="/posts/edit/1"
+                      onClick={[Function]}
+                    >
+                      <i
+                        aria-hidden="true"
+                        className="fa fa-pencil "
+                      />
+                    </a>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="collection-item"
+              >
+                Second Post
+                <div
+                  className="right"
+                >
+                  <span
+                    className="action-element action-element__delete"
+                    onClick={[Function]}
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="fa fa-trash"
+                      data-id={2}
+                    />
+                  </span>
+                  <span
+                    className="action-element "
+                  >
+                    <a
+                      href="/posts/edit/2"
+                      onClick={[Function]}
+                    >
+                      <i
+                        aria-hidden="true"
+                        className="fa fa-pencil "
+                      />
+                    </a>
+                  </span>
+                </div>
+              </li>
+              <li
+                className="collection-item"
+              >
+                Third Post
+                <div
+                  className="right"
+                >
+                  <span
+                    className="action-element action-element__delete"
+                    onClick={[Function]}
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="fa fa-trash"
+                      data-id={3}
+                    />
+                  </span>
+                  <span
+                    className="action-element "
+                  >
+                    <a
+                      href="/posts/edit/3"
+                      onClick={[Function]}
+                    >
+                      <i
+                        aria-hidden="true"
+                        className="fa fa-pencil "
+                      />
+                    </a>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card-reveal"
+    >
+      <span
+        className="card-title grey-text text-darken-4"
+      >
+        Posts
+        <i
+          className="material-icons right"
+        >
+          close
+        </i>
+      </span>
+    </div>
+    <div
+      className="card-action"
+    >
+      <a
+        href="/posts/new"
+        onClick={[Function]}
+      >
+        Create new
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Posts.cmp should render proper HTML when loading is performing atm 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-content"
+    >
+      <span
+        className="card-title grey-text text-darken-4"
+      >
+        Posts
+      </span>
+      <div>
+        <div
+          className="row"
+        >
+          <div
+            className="col s12 m12 l12"
+          >
+            <div
+              className="progress"
+            >
+              <div
+                className="indeterminate"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card-reveal"
+    >
+      <span
+        className="card-title grey-text text-darken-4"
+      >
+        Posts
+        <i
+          className="material-icons right"
+        >
+          close
+        </i>
+      </span>
+    </div>
+    <div
+      className="card-action"
+    >
+      <a
+        href="/posts/new"
+        onClick={[Function]}
+      >
+        Create new
+      </a>
+    </div>
+  </div>
+</div>
+`;

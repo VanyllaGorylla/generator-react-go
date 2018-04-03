@@ -1,13 +1,10 @@
 import React from 'react';
+import { Container, Card } from 'react-materialize';
 
 const Index = () => (
-  <div className="container index">
-    <div className="card">
-      <div className="card-content">
-        <span className="card-title">Hello my friend!!</span>
-      </div>
-    </div>
-  </div>
+  <Container className="index">
+    <Card title="Hello my friend!!" />
+  </Container>
 );
 
 export default Index;

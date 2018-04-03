@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import { Card, Row, Col, Container } from 'react-materialize';
 
 import LoadingWrapper from '@/components/LoadingWrapper/LoadingWrapper.cmp';
 
@@ -59,54 +61,54 @@ class PostForm extends Component {
     let { handleSubmit, posts: { crudLoading }, editMode } = this.props;
     let title = editMode ? 'Update' : 'Create';
 
-    return (
-      <div className="posts-create">
-        <div className="card">
-          <div className="card-content">
-            <span className="card-title">{title}</span>
-            <LoadingWrapper isLoading={crudLoading}>
-              <form className="form" onSubmit={handleSubmit}>
-                <Field name="id" component="input" type="hidden" />
+    const actions = [
+      <Link key="back-to-list" to="/posts">
+        Back to list
+      </Link>
+    ];
 
-                <div className="row">
-                  <div className="input-field col s12">
-                    <Field
-                      name="title"
-                      component={renderInput}
-                      label="First Name"
-                    />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="input-field col s12">
-                    <Field
-                      label="Content"
-                      name="content"
-                      component={renderTextarea}
-                    />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="input-field col s12">
-                    {!crudLoading ? (
-                      <button type="submit" className="btn">
-                        Submit
-                      </button>
-                    ) : (
-                      <button type="submit" className="btn" disabled>
-                        Submit
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </form>
-            </LoadingWrapper>
-          </div>
-          <div className="card-action">
-            <a href="/posts">Back to list</a>
-          </div>
-        </div>
-      </div>
+    return (
+      <Container className="posts-create">
+        <Card title={title} actions={actions}>
+          <LoadingWrapper isLoading={crudLoading}>
+            <form className="form" onSubmit={handleSubmit}>
+              <Field name="id" component="input" type="hidden" />
+
+              <Row>
+                <Col l={12} s={12} m={12}>
+                  <Field
+                    name="title"
+                    component={renderInput}
+                    label="First Name"
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col l={12} s={12} m={12}>
+                  <Field
+                    label="Content"
+                    name="content"
+                    component={renderTextarea}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col l={12} s={12} m={12}>
+                  {!crudLoading ? (
+                    <button type="submit" className="btn">
+                      Submit
+                    </button>
+                  ) : (
+                    <button type="submit" className="btn" disabled>
+                      Submit
+                    </button>
+                  )}
+                </Col>
+              </Row>
+            </form>
+          </LoadingWrapper>
+        </Card>
+      </Container>
     );
   }
 }

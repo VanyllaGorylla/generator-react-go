@@ -1,6 +1,6 @@
 {
   "name": "generator-react-go",
-  "version": "0.1.6",
+  "version": "0.2.1",
   "description": "Simple React generator with materialize css and webpack. It contains Redux, Redux Forms, Redux Promise Middleware aswell. You can start your work with this project and check how some things were solved.",
   "main": "index.js",
   "scripts": {

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1
+
+* Components refactor -> make them more reusable
+* Changes in tests
+* More examples of _react-materialize_ library usage
+* Adds indicators for backend errors -> Now you will see if something is wrong
+
 ## 0.2.0
 
 * Based on create-react-app

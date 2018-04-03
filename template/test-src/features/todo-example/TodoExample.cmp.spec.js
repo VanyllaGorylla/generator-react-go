@@ -1,19 +1,18 @@
 import React from 'react';
-import { mount, render, configure } from 'enzyme';
+import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import moxios from 'moxios';
 
-import Adapter from 'enzyme-adapter-react-16';
-
-import WrapperTodoExample, {
+import WrappedTodoExample, {
   TodoExample
 } from '@/features/todo-example/TodoExample.cmp';
-
-configure({ adapter: new Adapter() });
 
 describe('TodoExample test', function() {
   let store;
 
   beforeEach(() => {
+    moxios.install();
     store = configureStore()({
       todos: [
         {
@@ -35,21 +34,38 @@ describe('TodoExample test', function() {
     });
   });
 
-  it('should show me html', function() {
-    const wrapper = render(<WrapperTodoExample store={store} />);
-    let ulLi = wrapper.find('ul li');
-    expect(ulLi.length).toEqual(3);
+  it('should render proper html', function() {
+    let addTodo = jest.fn();
+
+    const todos = [
+      {
+        id: 1,
+        title: 'Do Laundry',
+        completed: false
+      },
+      {
+        id: 2,
+        title: 'Wash your dishes',
+        completed: true
+      },
+      {
+        id: 3,
+        title: 'Wash the floor',
+        completed: false
+      }
+    ];
+
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <WrappedTodoExample />
+        </Provider>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
-  it('should start addTodo method', function() {
-    let wrapper;
-    let todos = [];
-    const addTodo = jest.fn();
-
-    wrapper = mount(<TodoExample todos={todos} addTodo={addTodo} />);
-
-    wrapper.find('input').simulate('change', { target: { value: 'Arczik!' } });
-    wrapper.find('button').simulate('click');
-    expect(addTodo).toBeCalledWith('Arczik!');
+  afterEach(function() {
+    moxios.uninstall();
   });
 });

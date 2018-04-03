@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { change } from 'redux-form';
 import _ from 'lodash';
 import { toast } from 'react-toastify';
+import { Container } from 'react-materialize';
 
 import PostForm, { formName } from './PostForm.cmp';
 import { createPosts, getPostById, updatePost } from './posts.actions';
@@ -14,8 +15,6 @@ class PostEditCmp extends Component {
     this.state = {
       editMode: !_.isNil(this.props.match.params.id)
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +26,8 @@ class PostEditCmp extends Component {
           this.props.changeFormValue('title', title);
           this.props.changeFormValue('content', content);
         },
-        () => {
+        e => {
+          toast.error(e.toString());
           this.props.history.push('/posts');
           toast.error('An error has occured.');
         }
@@ -35,21 +35,21 @@ class PostEditCmp extends Component {
     }
   }
 
-  handleSubmit(formValues) {
+  handleSubmit = formValues => {
     let operation = this.state.editMode
       ? this.props.updatePost
       : this.props.createPosts;
     operation(formValues).then(() => {
       this.props.history.push('/posts');
     });
-  }
+  };
 
   render() {
     let editMode = this.state.editMode;
     return (
-      <div className="container">
+      <Container>
         <PostForm editMode={editMode} onSubmit={this.handleSubmit} />
-      </div>
+      </Container>
     );
   }
 }

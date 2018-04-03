@@ -1,64 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Row, Col, Card, Container } from 'react-materialize';
+import PropTypes from 'prop-types';
 
 import TodoList from './TodoList.cmp';
 import actions from './todoExample.actions';
 
+import TodoForm from './TodoForm.cmp';
+
 class TodoExample extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      inputVal: ''
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.props.addTodo(this.state.inputVal);
-    this.setState({ inputVal: '' });
-  }
-
-  handleInputChange(e) {
-    this.setState({ inputVal: e.target.value });
-  }
-
   render() {
     return (
-      <div className="container todo-example">
-        <div className="card">
-          <div className="card-content">
-            <span className="card-title">Todo Example</span>
-            <div className="row">
-              <div className="col col-6">
-                <input
-                  type="text"
-                  value={this.state.inputVal}
-                  placeholder="Put todo name here"
-                  onChange={this.handleInputChange}
-                />
-                <button className="btn" onClick={this.handleClick}>
-                  Add todo
-                </button>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col col-12">
-                <TodoList
-                  todos={this.props.todos}
-                  itemClick={this.props.toggleTodo}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Container className="todo-example">
+        <Card title="Todo Example">
+          <Row>
+            <Col>
+              <TodoForm handleSubmit={this.props.addTodo} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <TodoList todos={this.props.todos} />
+            </Col>
+          </Row>
+        </Card>
+      </Container>
     );
   }
 }
+
+TodoExample.propTypes = {
+  addTodo: PropTypes.func.isRequired,
+  todos: PropTypes.array.isRequired
+};
 
 const mapStateToProps = state => ({
   todos: state.todos
@@ -67,9 +41,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   addTodo: title => {
     dispatch({ type: actions.ADD_TODO, payload: { title } });
-  },
-  toggleTodo: todo => {
-    dispatch({ type: actions.TOGGLE_TODO, payload: todo });
   }
 });
 
